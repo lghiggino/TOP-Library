@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Odin project BOOK</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='reset.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='book_library.css'>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><img src="images/icon.png"><h1> Book Library</h1></li>
+            <li><a id="addABook">Add New Book</a></li>
+        </ul>
+    </header>
+
+    <section class="divisor"><span>Latest aditions</span></section>
+
+    <main id = "mainGrid">
+        <section class="latestBook">
+            <h2 id ="mainBookTitle">Click on "Add New Book"</h2>
+            <p id = "mainBookAuthor">Type the title, author </p>
+            <p id = "mainBookStatus">if you "read" or "not read"</p>
+            <p id = "mainBookPages">and the number of pages</p>
+        </section>
+
+        <section class="otherBooks"> </section>
+
+    </main>     
+
+    <details id="searchDetails">
+    <summary><section class="divisor"><span>Search your library</span><img class = "downarrow" src="images/downward-arrow.png"></section></summary>
+        <form>
+            <label for="indexes">Choose a field:</label>
+            <select id="indexes" name="indexes">
+                <option value="title" >title</option>
+                <option value="author">author</option>
+                <option value="length">length is more than</option>
+                <option value="length">length is more than</option>
+                <option value="status">status</option>
+                <option value="genre">genre</option>
+                <option value="quote" selected>quote</option>  
+            </select>
+        </form>
+        
+        <section class="searchbox-container">      
+                <div class="searchbox">
+                    <div> <input placeholder=" type * to see every book, or search by keywords" id="search"> </input></div>
+                </div>
+                <div class="button-container">
+                    <button id="searchButton" type="submit"> Search </button>
+                </div>
+        </section>    
+        
+    </details>    
+        <section id="searchResultDisplay"></section>
+    
+
+    <footer>
+        <ul>
+            <li>This is part of the Odin Project Curriculum</li>
+            <li>See my other projects</li>
+        </ul> 
+        
+    </footer>   
+    
+    <script src='book_library.js' defer></script>
+    <script src="search_library.js" defer></script>
+</body>
+</html>
+

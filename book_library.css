@@ -1,0 +1,275 @@
+body{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header, footer{
+    background-color: white;
+    border: 1px solid whitesmoke;
+    color:rgba(0,0,0,0.9);
+    width: 100%;
+}
+
+header ul, footer ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2.5% 5%;
+}
+
+header ul li img{
+    max-height: 25px;
+    max-width: auto;
+    padding-right: 0.575em;
+}
+
+header h1{
+    font-size: 1.68em;
+    float: inline-end;
+}
+
+header a{
+    background-color: rgb(32, 241, 32);
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    float: right;
+    height: 2em;
+    line-height: 2em;;
+    width: 9em;
+    text-align: center;
+}
+
+.divisor{
+    font-size: 0.815em;
+    margin: 2% 5%;
+}
+
+#mainGrid{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+    height: 300px;
+}
+
+.latestBook{
+    background-color: black;
+    border-top:10px;
+    color: white; 
+    height: 265;
+    margin-left: 1.575em;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+#mainBookTitle{
+    color: rgb(32, 241, 32);
+    font-size: 1.68em;
+    padding-top: 1em;
+}
+#mainBookAuthor{
+    font-size: 1em;
+    padding-top: 1em;
+}
+#mainBookStatus{
+    font-size: 1em;
+    padding-top: 1em;
+}
+
+#mainBookPages{
+    font-size: 1em;
+    padding-top: 1em;
+}
+
+.otherBooks{
+    background-color:white;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 1em;
+    margin-right: 1.575em;
+
+}
+
+.fourBooks{
+    background-color: white;
+    border: solid 1px black;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    
+}
+
+.bookTitle{
+    font-size: 1.215em;
+    margin-left: 0.775em;
+    margin-top: 0.775em;
+}
+
+.bookAuthor{
+    font-size: 0.775em;
+    margin-left: 1.215em;
+    margin-top: 0.775em;
+}
+
+.bookStatus{
+    font-size: 0.775em;
+    margin-left: 1.215em;
+    margin-top: 0.775em;
+}
+
+.bookPages{
+    font-size: 0.775em;
+    margin-left: 1.215em;
+    margin-top: 0.775em;
+}
+
+.editBook{
+    background-color: rgb(32, 241, 32);
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.775em;
+    align-self: flex-end;
+    width: 3em;
+    /*fazer isso ser o ultimo item, no canto direito do quadro*/
+}
+
+/* SEARCH CSS */
+.downarrow{
+    max-height: 12.5px;
+    max-width: auto;
+    margin-left: 0.575em;
+}
+
+details > summary:first-of-type {
+    list-style-type: none;
+}
+
+.searchbox-container{
+    margin: 2em auto;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 1px;
+    color: rgba(0,0,0,0.3);
+    min-width: 284px;
+    width: 35em;
+    padding: 0px;
+}
+
+.searchbox{
+    display: flex;
+    justify-content: center;
+    padding: 0.3em;
+    width: 35em;
+}
+
+.searchbox-container:hover,
+.searchbox-container:active{
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+}
+
+.searchbox input{
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    margin-top: 0px;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+    height: 34px;
+    font-size: 16px;
+    width: 25em;
+}
+
+.searchicon{
+    fill: #9AA0A6;
+    height: 24px;
+    padding: 4px 0px 0px 10px;
+    margin: 4px 8px 0px 0px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: red;
+}
+
+.errorMessage{
+    color: red;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+#searchResultDisplay{
+    background-color: cornflowerblue;
+    min-height: 2em;
+}
+
+.bookResults{
+}
+
+/* FOOTER CSS */
+footer{
+    position: fixed;
+    margin-bottom: 0px;
+}
+
+@media (max-width:600px){
+
+    #mainGrid{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+    }
+
+    .latestBook{
+        margin-right: 2.15em;
+        padding-bottom: 3em;
+    }
+
+    .otherBooks{
+
+    }
+
+    #searchDetails{
+        border: solid 1px purple;
+        margin-top: 15em;
+    }
+
+    .searchbox-container{
+        width: 20em;
+    }
+
+    .searchbox input{
+        width: 30em;
+    }
+    
+    footer{
+        border: 1px solid gold;
+        margin-right: 1em;
+        width: 100vw;
+    }
+    footer ul{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px){
+    header ul li{
+        display: flex;
+        flex-direction: column;
+    }
+    header ul li img{
+        display:none;
+    }
+
+    .divisor{
+        width: 80vw;
+    }
+}
