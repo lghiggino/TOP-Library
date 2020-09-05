@@ -7,35 +7,40 @@
         length: 293,
         status: "read",
         genre: "medieval fantasy",
-        quote: "onde upon a time there was a hobbit"   
+        quote: "onde upon a time there was a hobbit",
+        unique: 0,   
         },
         {title: 1984,
         author: "George Orwell",
         length: 303,
         status: "read",
         genre: "dystopic fantasy",
-        quote: "the big brother is watching you"
+        quote: "the big brother is watching you",
+        unique: 1,
         }, 
         {title: "Brave New World",
         author: "Aldous Huxley",
         length: 298,
         status: "read",
         genre: "dystopic fantasy",
-        quote: "If one's different, one's bound to be lonely."
+        quote: "If one's different, one's bound to be lonely.",
+        unique: 2,
         },
         {title: "Little mermaid",
         author: "Walter Disney",
         length: 130,
         status: "read",
         genre: "children book",
-        quote: "Somewhere into the sea"
+        quote: "Somewhere into the sea",
+        unique: 3,
         },
         {title: "Book 5 ",
         author: "LNG",
         length: 111,
         status: "not read",
         genre: "javascript programming",
-        quote: "Lets do this!"
+        quote: "Lets do this!",
+        unique: 4,
         },           
          ]
 
@@ -50,13 +55,13 @@
         this.length = length;
         this.status = status;
         this.genre = genre;
-        this.quote = quote
+        this.quote = quote;
+        this.unique = library.keys();
         //this.coverImage = coverImage
         }
         //funções adicionadas que cada livro tem
         info(){return `${this.title} by ${this.author}, ${this.length} pages, in ${this.genre} ${this.status}`} 
         multiply(n){return this.length*n}
-        
     }
 
     function addBookToLibrary(event){
