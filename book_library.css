@@ -46,41 +46,44 @@ header a{
     margin: 2% 5%;
 }
 
-#mainGrid{
-    display: flex;
-    flex-direction: row;
-    width:100%;
+.latestBook{
+    background-color: black;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 1em 1em;
 }
 
 .card{
-    background-color: darkorange;
-    margin-bottom: 1em;
-}
-
-.latestBook{
-    background-color: black;
-    border-top:10px;
+    border: solid 1px green;
     color: white; 
-    height: 265;
-    padding: 1em 1em;
-    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+    
 }
 
-#mainBookTitle{
+.text-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.mainBookTitle{
     color: rgb(32, 241, 32);
     font-size: 1.68em;
     padding-top: 1em;
 }
-#mainBookAuthor{
+.mainBookAuthor{
     font-size: 1em;
     padding-top: 1em;
 }
-#mainBookStatus{
+.mainBookStatus{
     font-size: 1em;
     padding-top: 1em;
 }
 
-#mainBookPages{
+.mainBookPages{
     font-size: 1em;
     padding-top: 1em;
 }
@@ -104,6 +107,10 @@ details > summary:first-of-type {
 details form{
     display: block;
     text-align: center;
+}
+
+#searchDetails{
+    margin-top: 1em;
 }
 
 .searchbox-container{
@@ -191,11 +198,6 @@ footer{
         padding-bottom: 3em;
     }
 
-    #searchDetails{
-        border: solid 1px purple;
-        margin-top: 17em;
-    }
-
     .searchbox-container{
         width: 20em;
     }
@@ -240,9 +242,7 @@ footer{
     }
 
 
-    #searchDetails{
-        margin-top: 20em;
-    }
+    
 
     .searchbox{
         max-width: 300px;

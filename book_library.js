@@ -97,14 +97,17 @@
       
         const title = document.createElement("h3");
         title.innerHTML = book.title ? book.title : "";
+        title.classList.add("mainBookTitle");
         textContainer.appendChild(title);
       
         const author = document.createElement("span");
         author.innerHTML = book.author ? book.author : "";
+        title.classList.add("mainBookAuthor");
         textContainer.appendChild(author);
       
         const length = document.createElement("span");
         length.innerHTML = book.length ? `${book.length} pages` : "";
+        title.classList.add("mainBookPages");
         textContainer.appendChild(length);
 
         const genre = document.createElement("span");
