@@ -64,7 +64,7 @@
         this.status = status;
         this.genre = genre;
         this.quote = quote;
-        this.unique = "";
+        //this.unique = "";
         //this.coverImage = coverImage
         }
         //funções adicionadas que cada livro tem
@@ -85,9 +85,9 @@
 
         temporaryBookObject = new Book(title, author, length, status, genre, quote); //adicionar coverImage
         library.push(temporaryBookObject)
-        let lastUnique = library[library.length-2]["unique"];
-        lastUnique++;
-        library[library.length-1]["unique"] = lastUnique;
+        // let lastUnique = library[library.length-2]["unique"];
+        // lastUnique++;
+        // library[library.length-1]["unique"] = lastUnique;
 
         buildAndUpdateGrid()
     }

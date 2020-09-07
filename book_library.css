@@ -61,6 +61,7 @@ header a{
     margin-left: 1.575em;
     padding-left: 1em;
     padding-top: 1em;
+    padding-bottom: 5px;
 }
 
 #mainBookTitle{
@@ -98,8 +99,7 @@ header a{
     color: black;
     display: flex;
     flex-direction: column;
-    margin: 10px;
-    
+    margin: 0px 10px 5px 10px; 
 }
 
 .bookTitle{
@@ -146,6 +146,11 @@ header a{
 
 details > summary:first-of-type {
     list-style-type: none;
+}
+
+details form{
+    display: block;
+    text-align: center;
 }
 
 .searchbox-container{
@@ -272,4 +277,20 @@ footer{
     .divisor{
         width: 80vw;
     }
+
+    .latestBook{
+        min-height: 40vh;
+    }
+
+    .searchbox{
+        
+        max-width: 300px;
+    }
+
+    #search{
+        margin-left: 1em;
+        max-width: 299px;
+    }
+
+
 }
