@@ -5,50 +5,44 @@
         {title: "the hobbit",
         author: "JRR Tolkien",
         length: 293,
-        status: "read",
+        status: true,
         genre: "medieval fantasy",
         quote: "once upon a time there was a hobbit",
-        unique: 0,   
         },
         {title: 1984,
         author: "George Orwell",
         length: 303,
-        status: "read",
+        status: true,
         genre: "dystopic fantasy",
         quote: "the big brother is watching you",
-        unique: 1,
         }, 
         {title: "Brave New World",
         author: "Aldous Huxley",
         length: 298,
-        status: "read",
+        status: true,
         genre: "dystopic fantasy",
         quote: "If one's different, one's bound to be lonely.",
-        unique: 2,
         },
         {title: "Little mermaid",
         author: "Walter Disney",
         length: 130,
-        status: "read",
+        status: true,
         genre: "children book",
         quote: "Somewhere into the sea",
-        unique: 3,
         },
         {title: "Book 5 ",
         author: "LNG",
         length: 111,
-        status: "not read",
+        status: false,
         genre: "javascript programming",
         quote: "Lets do this!",
-        unique: 4,
         }, 
         {title: "silmarillion",
         author: "Christopher Tolkien",
         length: 302,
-        status: "not read",
+        status: false,
         genre: "fantasy",
         quote: "Beren and Luthien",
-        unique: 5,
         },           
          ]
 
@@ -57,14 +51,13 @@
     addABook.addEventListener("click", addBookToLibrary)
 
     class Book{
-        constructor(title, author, length, status = "not read", genre, quote){
+        constructor(title, author, length, status = false, genre, quote){
         this.title = title;
         this.author = author;
         this.length = length;
         this.status = status;
         this.genre = genre;
         this.quote = quote;
-        //this.unique = "";
         //this.coverImage = coverImage
         }
         //funções adicionadas que cada livro tem
@@ -78,17 +71,14 @@
         let title = prompt("what is the book title?", "");
         let author = prompt("who is the author?", "");
         let length = prompt("how many pages?", 0);
-        let status = prompt("have you read this book before?", "not read");
+        let status = JSON.parse(prompt("have you read this book before?", "false"));
         let genre = prompt("what is this books genre?", "");
         let quote = prompt("would you like to add a quote?", "Lorem ipsum....");
         //let coverImage = prompt("would you like to upload a cover image?", "Lorem ipsum....");
 
         temporaryBookObject = new Book(title, author, length, status, genre, quote); //adicionar coverImage
         library.push(temporaryBookObject)
-        // let lastUnique = library[library.length-2]["unique"];
-        // lastUnique++;
-        // library[library.length-1]["unique"] = lastUnique;
-
+        
         buildAndUpdateGrid()
     }
 

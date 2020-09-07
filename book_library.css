@@ -237,13 +237,9 @@ footer{
         padding-bottom: 3em;
     }
 
-    .otherBooks{
-
-    }
-
     #searchDetails{
         border: solid 1px purple;
-        margin-top: 15em;
+        margin-top: 17em;
     }
 
     .searchbox-container{
@@ -265,6 +261,12 @@ footer{
     }
 }
 
+@media (max-width: 414px){
+    body, header, footer{
+        max-width: 409px;
+    }
+}
+
 @media (max-width: 400px){
     header ul li{
         display: flex;
@@ -279,11 +281,19 @@ footer{
     }
 
     .latestBook{
+        margin-top: 1em;
         min-height: 40vh;
     }
 
+    .otherBooks{
+        margin-top: 1em;
+    }
+
+    #searchDetails{
+        margin-top: 20em;
+    }
+
     .searchbox{
-        
         max-width: 300px;
     }
 
@@ -291,6 +301,17 @@ footer{
         margin-left: 1em;
         max-width: 299px;
     }
+}
+
+@media (max-width: 375px){
+    body, header, footer{
+        max-width: 373px;
+    }
+}
 
 
+@media (max-width: 360px){
+    body, header, footer{
+        max-width: 358px;
+    }
 }

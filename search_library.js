@@ -65,21 +65,16 @@ function check(){
                 editThisBook.classList.add("editBook");
                 section.appendChild(editThisBook);
                 editThisBook.textContent = "Edit"
-                editThisBook.addEventListener("click", editThisBookBaby)// não funciona por enquanto
+                editThisBook.addEventListener("click", editThisBookBaby)
                 }
             }
     }
-
     
-    
-    //criando as seções e as populando com os títulos encontrados na busca
-    
-    // status precisa ser repensado porque sempre terá READ ou NOT READ, então a busca precisa ser definida SEM a palavra READ
-
     //length precisa ser pensado porque estaremos recebendo uma string de numeros no input do usuário e teremos que lidar com isso para poder calcular maior ou menor.
+    
 } //aqui fecha a função check
 
 function editThisBookBaby(){
     console.log("hello")
-    // nesse momento essa função é chamada usando o array de resultado, não o array da biblioteca... como fazer um se comunicar com o outro
+    // nesse momento essa função é chamada usando o array de resultado, não o array da biblioteca... como fazer um se comunicar com o outro?
 }
