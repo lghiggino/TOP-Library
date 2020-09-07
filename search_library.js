@@ -8,6 +8,7 @@ function check(){
     let searchItem = document.querySelector("#search").value.toLowerCase();
     let searchIndex = document.querySelector("#indexes").value;
     let searchResultArray = [];
+
     //TESTES
     console.log(`Estamos buscando por ${searchItem}`, typeof searchItem)
     console.log(`no índice ${searchIndex}`)
@@ -54,27 +55,18 @@ function check(){
                 let bookStatus = document.createElement("span");
                 bookStatus.classList.add("bookStatus");
                 section.appendChild(bookStatus);
-                bookStatus.textContent = searchResultArray[i]["status"];
+                if (searchResultArray[i]["status"]){bookStatus.textContent = "read"}
+                else {bookStatus.textContent = "not read"}
 
                 let bookPages = document.createElement("span");
                 bookPages.classList.add("bookPages");
                 section.appendChild(bookPages);
                 bookPages.textContent = searchResultArray[i]["length"];
 
-                let editThisBook = document.createElement("a");
-                editThisBook.classList.add("editBook");
-                section.appendChild(editThisBook);
-                editThisBook.textContent = "Edit"
-                editThisBook.addEventListener("click", editThisBookBaby)
                 }
             }
     }
-    
-    //length precisa ser pensado porque estaremos recebendo uma string de numeros no input do usuário e teremos que lidar com isso para poder calcular maior ou menor.
-    
-} //aqui fecha a função check
 
-function editThisBookBaby(){
-    console.log("hello")
-    // nesse momento essa função é chamada usando o array de resultado, não o array da biblioteca... como fazer um se comunicar com o outro?
-}
+    //length precisa ser pensado porque estaremos recebendo uma string de numeros no input do usuário e teremos que lidar com isso para poder calcular maior ou menor.
+
+} //aqui fecha a função check

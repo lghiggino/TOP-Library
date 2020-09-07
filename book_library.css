@@ -47,10 +47,14 @@ header a{
 }
 
 #mainGrid{
-    display: grid;
-    grid-template-columns: 40% 60%;
-    width: 100%;
-    height: 300px;
+    display: flex;
+    flex-direction: row;
+    width:100%;
+}
+
+.card{
+    background-color: darkorange;
+    margin-bottom: 1em;
 }
 
 .latestBook{
@@ -58,10 +62,8 @@ header a{
     border-top:10px;
     color: white; 
     height: 265;
-    margin-left: 1.575em;
-    padding-left: 1em;
-    padding-top: 1em;
-    padding-bottom: 5px;
+    padding: 1em 1em;
+    width: 100vw;
 }
 
 #mainBookTitle{
@@ -83,58 +85,9 @@ header a{
     padding-top: 1em;
 }
 
-.otherBooks{
-    background-color:white;
-    display: grid;
-    grid-gap: 0px;
-    grid-template-columns: repeat(2, 1fr);
-    margin-left: 1em;
-    margin-right: 1.575em;
-
-}
-
-.fourBooks{
-    background-color: white;
-    border: solid 1px black;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    margin: 0px 10px 5px 10px; 
-}
-
-.bookTitle{
-    font-size: 1.215em;
-    margin-left: 0.775em;
-    margin-top: 0.775em;
-}
-
-.bookAuthor{
-    font-size: 0.775em;
-    margin-left: 1.215em;
-    margin-top: 0.775em;
-}
-
-.bookStatus{
-    font-size: 0.775em;
-    margin-left: 1.215em;
-    margin-top: 0.775em;
-}
-
-.bookPages{
-    font-size: 0.775em;
-    margin-left: 1.215em;
-    margin-top: 0.775em;
-}
-
-.editBook{
-    background-color: rgb(32, 241, 32);
-    border-radius: 15px;
-    color: white;
-    cursor: pointer;
-    font-size: 0.775em;
-    align-self: flex-end;
-    width: 3em;
-    /*fazer isso ser o ultimo item, no canto direito do quadro*/
+.read{
+    background-color: green;
+    /* AQUI É O BOTÃO DE LIDO OU NÃO LIDO*/
 }
 
 /* SEARCH CSS */
@@ -216,6 +169,7 @@ details form{
 }
 
 .bookResults{
+
 }
 
 /* FOOTER CSS */
@@ -285,9 +239,6 @@ footer{
         min-height: 40vh;
     }
 
-    .otherBooks{
-        margin-top: 1em;
-    }
 
     #searchDetails{
         margin-top: 20em;
