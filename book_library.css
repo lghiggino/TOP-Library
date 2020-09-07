@@ -48,14 +48,17 @@ header a{
 
 .latestBook{
     background-color: black;
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin-left: 1em;
     margin-right: 1em;
     padding: 1em 1em;
 }
 
 .card{
+    flex-grow: 1;
     border: solid 1px green;
     color: white; 
     display: flex;
@@ -72,20 +75,12 @@ header a{
 .mainBookTitle{
     color: rgb(32, 241, 32);
     font-size: 1.68em;
-    padding-top: 1em;
+    padding: 0.5em 0.5em;
 }
-.mainBookAuthor{
+.mainBookAuthor, .mainBookStatus, .mainBookPages{
     font-size: 1em;
-    padding-top: 1em;
-}
-.mainBookStatus{
-    font-size: 1em;
-    padding-top: 1em;
-}
-
-.mainBookPages{
-    font-size: 1em;
-    padding-top: 1em;
+    padding: 0.5em 0em 0.5em 0.5em;
+    
 }
 
 .read{

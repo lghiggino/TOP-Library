@@ -102,17 +102,13 @@
       
         const author = document.createElement("span");
         author.innerHTML = book.author ? book.author : "";
-        title.classList.add("mainBookAuthor");
+        author.classList.add("mainBookAuthor");
         textContainer.appendChild(author);
       
         const length = document.createElement("span");
         length.innerHTML = book.length ? `${book.length} pages` : "";
-        title.classList.add("mainBookPages");
+        length.classList.add("mainBookPages");
         textContainer.appendChild(length);
-
-        const genre = document.createElement("span");
-        genre.innerHTML = book.genre ? book.genre : "";
-        textContainer.appendChild(genre);
       
         // group buttons into a container
         const btnContainer = document.createElement("div");
