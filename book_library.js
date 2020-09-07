@@ -7,7 +7,7 @@
         length: 293,
         status: "read",
         genre: "medieval fantasy",
-        quote: "onde upon a time there was a hobbit",
+        quote: "once upon a time there was a hobbit",
         unique: 0,   
         },
         {title: 1984,
@@ -41,6 +41,14 @@
         genre: "javascript programming",
         quote: "Lets do this!",
         unique: 4,
+        }, 
+        {title: "silmarillion",
+        author: "Christopher Tolkien",
+        length: 302,
+        status: "not read",
+        genre: "fantasy",
+        quote: "Beren and Luthien",
+        unique: 5,
         },           
          ]
 
@@ -49,14 +57,14 @@
     addABook.addEventListener("click", addBookToLibrary)
 
     class Book{
-        constructor(title, author, length, status, genre, quote){
+        constructor(title, author, length, status = "not read", genre, quote){
         this.title = title;
         this.author = author;
         this.length = length;
         this.status = status;
         this.genre = genre;
         this.quote = quote;
-        this.unique = library.keys();
+        this.unique = "";
         //this.coverImage = coverImage
         }
         //funções adicionadas que cada livro tem
@@ -75,8 +83,11 @@
         let quote = prompt("would you like to add a quote?", "Lorem ipsum....");
         //let coverImage = prompt("would you like to upload a cover image?", "Lorem ipsum....");
 
-        temporaryBookObject = new Book(title, author, length, status, genre); //adicionar cover
+        temporaryBookObject = new Book(title, author, length, status, genre, quote); //adicionar coverImage
         library.push(temporaryBookObject)
+        let lastUnique = library[library.length-2]["unique"];
+        lastUnique++;
+        library[library.length-1]["unique"] = lastUnique;
 
         buildAndUpdateGrid()
     }
@@ -87,8 +98,6 @@
         let mainBookAuthor =  document.querySelector("#mainBookAuthor");
         let mainBookStatus =  document.querySelector("#mainBookStatus");
         let mainBookPages =  document.querySelector("#mainBookPages");
-        
-        
 
         mainBookTitle.textContent = library[library.length-1]["title"];
         mainBookAuthor.textContent = library[library.length-1]["author"];
