@@ -16,6 +16,34 @@
         </ul>
     </header>
 
+    <section id="bookForm" class="hidden">
+        <fieldset class="fieldset">
+            <div> Insert Book Data</div>
+            <div><label for="bookTitle">Title:</label> 
+            <input id ="bookTitle" type="text" placeholder="Enter title..."></div>
+
+            <div><label for="bookAuthor">Author:</label> 
+            <input id ="bookAuthor" type="text" placeholder="Enter author..."></div>
+
+            <div><label for="bookLength">Length:</label> 
+            <input id ="bookLength" type="text" placeholder="Enter length..."></div>
+
+            <div><p>Have you read this book?</p> 
+            <input id ="bookStatusTrue" type="radio" value="true" name="bookStatus">
+            <label for="bookStatusTrue">Read</label>
+            <input id ="bookStatusFalse" type="radio" value="false" name="bookStatus">
+            <label for="bookStatusFalse">Not read</label></div>
+
+            <div><label for="bookGenre">Genre:</label>
+            <input id ="bookGenre" type="text" placeholder="Electric fantasy"></div>
+
+            <div><label for="bookQuote">Quote:</label>
+            <input id ="bookQuote" type="text" placeholder="One ring to rule them all..."></div>
+
+            <button id="submitBook">Submit book</button>
+        </fieldset>
+    </section>
+
     <section class="divisor"><span>Latest aditions</span></section>
 
     <main id = "mainGrid">

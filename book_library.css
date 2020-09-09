@@ -46,6 +46,32 @@ header a{
     margin: 2% 5%;
 }
 
+#bookForm{
+    border: solid 1px black;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 1em 1em;
+}
+
+
+fieldset div{
+    padding-bottom: 0.5em;
+}
+
+fieldset div label{
+    display: inline-block;
+    width: 61px;
+}
+
+input{
+    padding: 0.5em;
+    height: 2em;
+}
+
+.hidden{
+    display:none;
+}
+
 .latestBook{
     background-color: black;
     display: flex;
@@ -63,8 +89,8 @@ header a{
     color: white; 
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     margin: 0.5em;
-    
 }
 
 .text-container{
@@ -80,12 +106,18 @@ header a{
 .mainBookAuthor, .mainBookStatus, .mainBookPages{
     font-size: 1em;
     padding: 0.5em 0em 0.5em 0.5em;
-    
 }
 
 .read{
     background-color: green;
     /* AQUI É O BOTÃO DE LIDO OU NÃO LIDO*/
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 0.75em;
 }
 
 /* SEARCH CSS */
@@ -171,26 +203,23 @@ details form{
 }
 
 .bookResults{
-
+    display: flex;
+    flex-direction: row;
+    font-size: 0.75em;
+    padding: 0.5em;
 }
 
-/* FOOTER CSS */
-footer{
-    position: fixed;
-    margin-bottom: 0px;
+.bookTitle, .bookAuthor, .bookStatus, .bookPages{
+    margin: 0.5em;
 }
 
+/* MEDIA QUERIES */
 @media (max-width:600px){
 
     #mainGrid{
         display: flex;
         flex-direction: column;
         width:100%;
-    }
-
-    .latestBook{
-        margin-right: 2.15em;
-        padding-bottom: 3em;
     }
 
     .searchbox-container{

@@ -61,7 +61,7 @@ function check(){
                 let bookPages = document.createElement("span");
                 bookPages.classList.add("bookPages");
                 section.appendChild(bookPages);
-                bookPages.textContent = searchResultArray[i]["length"];
+                bookPages.textContent = `${searchResultArray[i]["length"]} pages`;
 
                 }
             }

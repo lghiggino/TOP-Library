@@ -39,39 +39,48 @@
         },           
          ]
 
-    //add a new book button and functionality (hoisting)
-    let addABook = document.querySelector("#addABook")
-    addABook.addEventListener("click", addBookToLibrary)
-
+    //BOOK CLASS
     class Book{
-        constructor(title, author, length, status = false, genre, quote){
-        this.title = title;
-        this.author = author;
-        this.length = length;
-        this.status = status;
-        this.genre = genre;
-        this.quote = quote;
-        }
+      constructor(title, author, length, status = false, genre, quote){
+      this.title = title;
+      this.author = author;
+      this.length = length;
+      this.status = status;
+      this.genre = genre;
+      this.quote = quote;
       }
+    }
 
-    Book.prototype.toggleRead = function() {
-      this.status = !this.status;
-    };  
+  Book.prototype.toggleRead = function() {
+    this.status = !this.status;
+  };  
 
-    function addBookToLibrary(event){
-        event.preventDefault()
-        //esses prompts se tornarão um form para adicionar novos livros
-        let title = prompt("what is the book title?", "");
-        let author = prompt("who is the author?", "");
-        let length = prompt("how many pages?", 0);
-        let status = JSON.parse(prompt("have you read this book before?", "false"));
-        let genre = prompt("what is this books genre?", "");
-        let quote = prompt("would you like to add a quote?", "Lorem ipsum....");
+    //add new book panel popup
+    let addABook = document.querySelector("#addABook");
+    addABook.addEventListener("click", panelPopUp);
+    function panelPopUp(){
+      document.querySelector("#bookForm").classList.toggle("hidden");
+    };
 
-        temporaryBookObject = new Book(title, author, length, status, genre, quote); 
-        library.push(temporaryBookObject);
+    document.querySelector("#submitBook").addEventListener("click", submitBook);
+    function submitBook(e){
+      e.preventDefault();
 
-        renderCycle()
+      let title = document.querySelector("#bookTitle").value;
+      let author = document.querySelector("#bookAuthor").value;
+      let length = document.querySelector("#bookLength").value;
+      let status = JSON.parse(document.querySelector('input[name="bookStatus"]:checked').value);
+      let genre = document.querySelector("#bookGenre").value;
+      let quote = document.querySelector("#bookQuote").value;
+
+      temporaryBookObject = new Book(title, author, length, status, genre, quote); 
+      library.push(temporaryBookObject);
+
+      //clear the submit panel
+      document.querySelector("#bookForm").classList.toggle("hidden");
+
+      //starts rendering the book grid
+      renderCycle()
     }
 
     function render(){
