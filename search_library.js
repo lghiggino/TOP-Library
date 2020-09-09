@@ -36,6 +36,7 @@ function check(){
             } 
         } console.table(searchResultArray);
             if (searchResultArray.length>0){
+                document.querySelector("#searchResultDisplay").classList.add("searchResultDisplayBackGround");
                 for (i = 0; i < searchResultArray.length; i++){
 
                 let section = document.createElement("section");

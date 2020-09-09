@@ -198,8 +198,14 @@ details form{
 }
 
 #searchResultDisplay{
-    background-color: cornflowerblue;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 1em 1em;
     min-height: 2em;
+}
+
+.searchResultDisplayBackGround{
+    background-color: rgba(0,0,0,0.1);
 }
 
 .bookResults{
